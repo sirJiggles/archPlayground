@@ -33,7 +33,7 @@ const Lambda = () => {
     //   variables,
     // },
     // we want to run the default function from the index
-    handler: 'index.handler',
+    handler: 'lambda-one/index.handler',
     runtime: 'nodejs12.x',
     role: role.arn,
     timeout: 10,

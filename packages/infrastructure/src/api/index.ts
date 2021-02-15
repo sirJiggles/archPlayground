@@ -11,8 +11,23 @@ const api = (config: APIConfig) => {
         method: method || 'GET',
         eventHandler,
       },
+      {
+        path: path || '/',
+        method: 'OPTIONS',
+        eventHandler: async () => {
+          return {
+            statusCode: 200,
+            body: '',
+            headers: {
+              'Access-Control-Allow-Headers': 'Content-Type',
+              'Access-Control-Allow-Origin': '*',
+              'Access-Control-Allow-Methods': 'OPTIONS,POST,GET',
+            },
+          }
+        },
+      },
     ],
   })
 }
 
-export default api
+export { api }

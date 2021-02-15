@@ -1,3 +1,5 @@
+import { corsHeaders } from '../cors-headers'
+
 // this is the lambda
 const handler = async () => {
   try {
@@ -12,8 +14,9 @@ const handler = async () => {
 
   return {
     statusCode: 200,
+    headers: { ...corsHeaders },
     // just send back the date
-    body: { theDate: new Date().toLocaleDateString() },
+    body: JSON.stringify({ theTime: new Date().toTimeString() }),
   }
 }
 
