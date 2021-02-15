@@ -2,9 +2,14 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "dev:front": "cd packages/front-end && yarn start"
+    "lint": "lerna run lint --parallel",
+    "dev": "lerna run start",
+    "deploy": "lerna run up"
   },
   "devDependencies": {
     "lerna": "^3.22.1"
-  }
+  },
+  "workspaces": [
+    "packages/*"
+  ]
 }
