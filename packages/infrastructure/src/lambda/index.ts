@@ -27,10 +27,11 @@ const Lambda = () => {
       // zip up the output of our serverless function
       '.': new pulumi.asset.FileArchive('../lambdas/dist'),
     }),
-    environment: {
-      // these are needed to run the lambda
-      variables,
-    },
+    // if using env vars uncomment
+    // environment: {
+    //   // these are needed to run the lambda
+    //   variables,
+    // },
     // we want to run the default function from the index
     handler: 'index.handler',
     runtime: 'nodejs12.x',

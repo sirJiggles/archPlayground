@@ -1,7 +1,8 @@
 // this is the lambda
 const handler = async () => {
   try {
-    console.log('here we can do some work!')
+    const t = 'this is a thing'
+    console.log('here we can do some work!', t)
   } catch (error) {
     return {
       statusCode: 500,
