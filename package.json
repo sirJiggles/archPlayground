@@ -3,8 +3,10 @@
   "private": true,
   "scripts": {
     "lint": "lerna run lint --parallel",
-    "dev": "lerna run start",
-    "deploy": "lerna run up"
+    "dev:front-end": "lerna run start-website",
+    "dev:lambda": "lerna run lambda",
+    "deploy": "lerna run up",
+    "package": "lerna run package"
   },
   "devDependencies": {
     "lerna": "^3.22.1"

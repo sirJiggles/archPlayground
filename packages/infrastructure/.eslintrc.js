@@ -1,3 +1,3 @@
 module.exports = {
-  extends: ['@enabler/eslint-config'],
+  extends: ['@arch-playground/eslint-config'],
 }

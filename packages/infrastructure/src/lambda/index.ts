@@ -25,7 +25,7 @@ const Lambda = () => {
   return new aws.lambda.Function('lambda', {
     code: new pulumi.asset.AssetArchive({
       // zip up the output of our serverless function
-      '.': new pulumi.asset.FileArchive('../serverless/dist'),
+      '.': new pulumi.asset.FileArchive('../lambdas/dist'),
     }),
     environment: {
       // these are needed to run the lambda
